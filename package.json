@@ -1,0 +1,36 @@
+{
+  "name": "eventstreams",
+  "version": "0.0.1",
+  "description": "EventStreams",
+  "main": "app.js",
+  "scripts": {
+    "start": "service-runner",
+    "test": "mocha"
+  },
+  "keywords": [
+    "kafka",
+    "websockets",
+    "socket.io",
+    "kasocki",
+    "event",
+    "stream"
+  ],
+  "author": "Andrew Otto <otto@wikimedia.org>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bluebird": "^3.4.3",
+    "bunyan": "^1.8.1",
+    "kasocki": "^0.1.1",
+    "service-runner": "^2.1.6",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "bunyan-prettystream": "^0.1.3",
+    "istanbul": "^0. 4.4",
+    "jscs": "^3.0.7",
+    "mocha": "^2.5.3",
+    "mocha-jscs": "^5.0.1",
+    "mocha-jshint": "^2.3.1",
+    "nsp": "^2.6.1"
+  }
+}

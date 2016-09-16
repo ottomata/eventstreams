@@ -1,0 +1,40 @@
+# Number of worker processes to spawn.
+# Set to 0 to run everything in a single process without clustering.
+# Use 'ncpu' to run as many workers as there are CPU units
+num_workers: 0
+
+# Number of milliseconds to wait for a heartbeat from worker before killing
+# and restarting it
+worker_heartbeat_timeout: 7500
+
+# Log error messages and gracefully restart a worker if v8 reports that it
+# uses more heap (note: not RSS) than this many mb.
+worker_heap_limit_mb: 500
+
+# Logger info
+logging:
+  level: info
+  streams:
+  - type: debug
+  # Use gelf-stream -> logstash
+  - type: gelf
+    host: deployment-logstash2.deployment-prep.eqiad.wmflabs
+    port: 12201
+
+  # Statsd metrics reporter
+metrics:
+  type: statsd
+  host: labmon1001.eqiad.wmnet
+  port: 8125
+
+services:
+  - name: eventstreams
+    # a relative path or the name of an npm package, if different from name
+    module: ./app.js
+
+    # per-service config
+    conf:
+      port: 6927
+      # interface: 0.0.0.0
+      kafkaConfig:
+        metadata.broker.list: deployment-kafka04.deployment-prep.eqiad.wmflabs:9092,deployment-kafka05.deployment-prep.eqiad.wmflabs:9092
