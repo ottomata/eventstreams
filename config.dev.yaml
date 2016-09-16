@@ -22,7 +22,7 @@ metrics:
   type: log
 
 services:
-  - name: event-streams
+  - name: eventstreams
     # a relative path or the name of an npm package, if different from name
     module: ./app.js
 

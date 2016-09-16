@@ -11,7 +11,6 @@ const defaultPort       = 6927;
 const defaultBrokers    = 'localhost:9092';
 
 function createKasockiServer(options) {
-    // console.log(options);
     const defaultConfig = {
         port: defaultPort,
         kafkaConfig: {

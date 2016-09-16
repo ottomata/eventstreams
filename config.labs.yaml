@@ -35,6 +35,5 @@ services:
     # per-service config
     conf:
       port: 6927
-      # interface: 0.0.0.0
       kafkaConfig:
         metadata.broker.list: deployment-kafka04.deployment-prep.eqiad.wmflabs:9092,deployment-kafka05.deployment-prep.eqiad.wmflabs:9092

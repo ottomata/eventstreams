@@ -23,10 +23,7 @@
   "disallowKeywordsOnNewLine": false,
   "requireCamelCaseOrUpperCaseIdentifiers": false,
   "excludeFiles": [
-    "examples/**",
     "node_modules/**",
     "test/**",
-    "coverage/**",
-    "scr/**"
   ]
 }
