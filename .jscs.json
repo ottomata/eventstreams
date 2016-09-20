@@ -24,6 +24,7 @@
   "requireCamelCaseOrUpperCaseIdentifiers": false,
   "excludeFiles": [
     "node_modules/**",
-    "test/**"
+    "test/**",
+    "docs/**"
   ]
 }
